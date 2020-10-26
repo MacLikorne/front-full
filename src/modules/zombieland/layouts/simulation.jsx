@@ -349,7 +349,7 @@ const pop3 = [
         ]
     ]
 ]
-const Simulation = props => {
+export const ZombieSimulation = props => {
     const [day, setDay] = useState(0)
 
     return (
@@ -359,5 +359,3 @@ const Simulation = props => {
         </Fragment>
     )
 }
-
-export default Simulation

@@ -1,13 +1,11 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
-const ZombieSetup = ({ match }) => {
+export const ZombieSetup = (props) => {
     return (
         <Fragment>
             <h1>Setup</h1>
-            <Link to={`${match.url}/simulation`}>Go</Link>
+            <Link to='/zombieland/simulation'>Go</Link>
         </Fragment>
     )
 }
-
-export default ZombieSetup

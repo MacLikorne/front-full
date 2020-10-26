@@ -4,7 +4,7 @@ import { ZombieRouter } from './zombieland.router'
 const Zombieland = ({ match }) => {
     return (
         <Fragment>
-            <h1>Zombieland</h1>
+            <h1>Bienvenue à Zombieland</h1>
             <ZombieRouter match={match} />
         </Fragment>
     )
