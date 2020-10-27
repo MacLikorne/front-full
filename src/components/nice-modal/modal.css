@@ -1,0 +1,12 @@
+#close-button{
+    position: absolute;
+   right: 0px;
+}
+
+#modal{
+    max-width: fit-content;
+    position: absolute;
+    max-height: fit-content;
+    left: 30%;
+    top: 10%;
+}

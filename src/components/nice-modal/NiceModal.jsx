@@ -1,0 +1,19 @@
+import React, { memo } from 'react'
+import './modal.css'
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CancelIcon from '@material-ui/icons/Cancel';
+import { Button } from '@material-ui/core';
+
+export const NiceModal = memo(props => {
+    return (
+        <Card id='modal' hidden={!props.show}>
+            <Button onClick={props.close} id='close-button'>
+                <CancelIcon />
+            </Button>
+            <CardContent>
+                <iframe width="560" height="315" src={`${props.show ? "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" : ""}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+            </CardContent>
+        </Card>
+    )
+})
