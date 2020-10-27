@@ -13,7 +13,7 @@ const style = {
 const Home = props => {
     return (
         <Fragment>
-            <h1>Bienvenue sur ma super application !!!</h1>
+            <h2>Bienvenue sur ma super application !!!</h2>
             <img src={heavy} alt="heavy stuff" style={style.img} />
         </Fragment>
     )

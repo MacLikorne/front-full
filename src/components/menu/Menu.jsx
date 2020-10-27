@@ -17,7 +17,9 @@ export const Menu = props => {
     const [showModal, setShowModal] = useState(false)
 
     const push = (location) => {
-        history.replace(location)
+        if (!history.location.pathname.includes(location)) {
+            history.replace(location)
+        }
     }
 
     return (
