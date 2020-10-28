@@ -12,7 +12,7 @@ export const Router = props => {
                 <Route exact path='/stargate' component={lazy(() => import('../../modules/stargate/Stargate'))} />
                 <Route exact path='/zombieland' component={lazy(() => import('../../modules/zombieland/Zombieland'))} />
                 <Route exact path='/home' component={lazy(() => import('../../modules/home/Home'))} />
-                <Route path='/'>
+                <Route exact path='/'>
                     <Redirect to='/home' />
                 </Route>
             </Suspense>
