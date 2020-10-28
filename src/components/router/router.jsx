@@ -1,8 +1,9 @@
-import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
+import React, { lazy, Suspense, useEffect } from 'react'
+import { BrowserRouter, Redirect, Route, useHistory } from 'react-router-dom'
 
 
 export const Router = props => {
+
     return (
         <BrowserRouter>
             {props.children}

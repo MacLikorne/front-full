@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 const Magicbus = props => {
     return (
         <Fragment>
-            <h1>Magicbus</h1>
+            <h2>Allez monte ça va être super !</h2>
         </Fragment>
     )
 }

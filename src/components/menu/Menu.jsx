@@ -1,5 +1,5 @@
 import { AppBar, Tabs, Tab, Button, Toolbar } from '@material-ui/core'
-import React, { Fragment, useContext, useState } from 'react'
+import React, { Fragment, useContext, useEffect, useState } from 'react'
 import BusIcon from '@material-ui/icons/DirectionsBus'
 import StarIcon from '@material-ui/icons/LocalActivityOutlined';
 import HomeIcon from '@material-ui/icons/Home';
@@ -15,6 +15,10 @@ export const Menu = props => {
     const { state, dispatch } = useContext(storeContext)
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
+
+    useEffect(() => {
+        history.push('/')
+    }, [])
 
     const push = (location) => {
         if (!history.location.pathname.includes(location)) {

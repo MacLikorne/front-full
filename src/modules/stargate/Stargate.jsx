@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 const Stargate = props => {
     return (
         <Fragment>
-            <h1>Stargate</h1>
+            <h2>Mes respects à Toutankhamon, duc** !</h2>
         </Fragment>
     )
 }

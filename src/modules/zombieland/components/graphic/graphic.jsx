@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react'
 import React, { useRef, useEffect, useState } from 'react'
 import { WebGLRenderer } from 'three'
 import { createMatrix, generateScene } from './graphic.service'
@@ -22,16 +23,16 @@ export const Graphic = (props) => {
 
 
     useEffect(() => {
-        setScene(generateScene(renderer, graphic, props.pop))
+        setScene(generateScene(renderer, graphic, props.pop, props.infectedColor, props.healthyColor))
     }, [])
 
     useEffect(() => {
         if (scene) {
-            props.pop[0][0][0] = true
+            console.log(renderer)
             scene.remove(...scene.children)
-            createMatrix(props.pop, scene)
+            createMatrix(props.pop, scene, props.infectedColor, props.healthyColor)
         }
-    }, [props.day])
+    }, [props.pop])
 
 
     return (
