@@ -11,4 +11,4 @@ class PopService extends ApiService {
     }
 }
 
-export default Object.freeze(new PopService(3001, "population", PopulationDto))
+export default Object.freeze(new PopService(process.env.REACT_APP_ZOMBIE_BACK_PORT, "population", PopulationDto))

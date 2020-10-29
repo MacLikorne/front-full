@@ -3,6 +3,7 @@ import { BrowserRouter, Redirect, Route, useHistory } from 'react-router-dom'
 
 
 export const Router = props => {
+    console.log(document.querySelector('#footer'))
 
     return (
         <BrowserRouter>

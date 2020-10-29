@@ -6,12 +6,7 @@ import { createMatrix, generateScene } from './graphic.service'
 
 
 const style = {
-    container: {
-        display: 'flex',
-        justifyContent: 'center'
-    },
     graphic: {
-        margin: '1%',
         width: window.innerWidth * 60 / 100,
         height: window.innerHeight * 75 / 100
     }
@@ -36,8 +31,6 @@ export const Graphic = (props) => {
 
 
     return (
-        <div style={style.container}>
-            <div ref={graphic} style={style.graphic} />
-        </div>
+        <div ref={graphic} style={style.graphic} id={props.id} />
     )
 }

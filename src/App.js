@@ -7,10 +7,13 @@ import { StoreProvider } from './components/flux/Store';
 function App() {
   return (
     <StoreProvider>
-      <Router>
-        <Menu />
-      </Router>
+      <div id='app'>
+        <Router>
+          <Menu />
+        </Router>
+      </div>
       <Footer />
+
     </StoreProvider>
   );
 }

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { BrowserRouter, Redirect, Route } from 'react-router-dom'
-import { ZombieSetup } from './layouts/setup'
-import { ZombieSimulation } from './layouts/simulation'
+import { ZombieSetup } from './layouts/setup/setup'
+import { ZombieSimulation } from './layouts/simulation/simulation'
 
 export const ZombieRouter = ({ match, colors }) => {
     return (

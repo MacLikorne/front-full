@@ -1,5 +1,5 @@
 import { PopulationDto } from '../models/population.dto';
-import { ApiService } from '../../../components/api/api.service'
+import { ApiService } from 'components/api/api.service'
 
 class ZombieService extends ApiService {
     constructor(port, endpoint, Type) {
@@ -9,4 +9,4 @@ class ZombieService extends ApiService {
 
 }
 
-export default Object.freeze(new ZombieService(3000, "zombies", PopulationDto))
+export default Object.freeze(new ZombieService(process.env.REACT_APP_ZOMBIE_BACK_PORT, "zombies", PopulationDto))

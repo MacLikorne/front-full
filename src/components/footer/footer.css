@@ -2,9 +2,9 @@
     text-align: center;
     color: #FFF;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     font-size: x-large;
     background-color: #3f51b5;
+    height: 35px; 
 }
