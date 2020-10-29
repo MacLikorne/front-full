@@ -1,11 +1,20 @@
 import { PopulationDto } from '../models/population.dto';
-import { ApiService } from 'components/api/api.service'
+import { ApiService } from '../../../components/api/api.service'
 
 class ZombieService extends ApiService {
     constructor(port, endpoint, Type) {
         super(port, endpoint, Type)
     }
 
+    infect = (popDto) => {
+        return fetch(this.url, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(popDto)
+        }).then(resp => resp.json()).then(json => new this.Type(json))
+    }
 
 }
 

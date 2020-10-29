@@ -14,7 +14,7 @@ const style = {
 export const Graphic = (props) => {
     const graphic = useRef(null)
     const [scene, setScene] = useState(null)
-    const renderer = new WebGLRenderer({ alpha: true, antialias: true })
+    const renderer = new WebGLRenderer({ alpha: true, antialias: true, precision: "lowp" })
 
 
     useEffect(() => {
@@ -23,7 +23,6 @@ export const Graphic = (props) => {
 
     useEffect(() => {
         if (scene) {
-            console.log(renderer)
             scene.remove(...scene.children)
             createMatrix(props.pop, scene, props.infectedColor, props.healthyColor)
         }

@@ -1,10 +1,8 @@
-import React, { lazy, Suspense, useEffect } from 'react'
-import { BrowserRouter, Redirect, Route, useHistory } from 'react-router-dom'
+import React, { lazy, Suspense } from 'react'
+import { BrowserRouter, Redirect, Route } from 'react-router-dom'
 
 
 export const Router = props => {
-    console.log(document.querySelector('#footer'))
-
     return (
         <BrowserRouter>
             {props.children}
