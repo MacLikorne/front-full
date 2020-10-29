@@ -1,0 +1,16 @@
+#simulation{
+    display: inline-block;
+    margin: 0 18%;
+}
+
+#day {
+    float: right;
+}
+
+#graphic{
+    margin: '1%';
+}
+
+#prog-bar{
+    margin-top: 3%;
+}
