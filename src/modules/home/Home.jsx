@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import heavy from '../../assets/images/heavy.jpg'
 
 const style = {

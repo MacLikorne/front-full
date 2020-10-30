@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import './modal.css'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';

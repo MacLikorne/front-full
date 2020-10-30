@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useMemo } from 'react'
+import { useRef, useEffect, useState, useMemo } from 'react'
 import { WebGLRenderer } from 'three'
 import { createMatrix, generateScene } from './graphic.service'
 

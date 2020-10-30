@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { storeContext } from '../../../../components/flux/Store'
 import { Graphic } from '../../components/graphic/graphic'
 import PopService from '../../services/population.service'

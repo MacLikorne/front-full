@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import { Fragment, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import Slider from '@material-ui/core/Slider';
 import { storeContext } from '../../../../components/flux/Store';
