@@ -7,7 +7,6 @@ import './simulation.css'
 import { ProgressBar } from '../../components/ProgressBar'
 import { Button } from '@material-ui/core'
 
-
 export const ZombieSimulation = props => {
     const { state } = useContext(storeContext)
     const [day, setDay] = useState(0)
@@ -15,7 +14,7 @@ export const ZombieSimulation = props => {
 
     useEffect(() => {
         PopService.generatePop(state.pop).then(pop => setPopDto(pop))
-    }, [state.pop])
+    }, [])
 
     const infect = async () => {
         if (day === 0) {
@@ -26,22 +25,6 @@ export const ZombieSimulation = props => {
         setDay(day + 1)
     }
 
-    // useEffect(() => {
-    //     if (popDto?.infectedRatio !== null && popDto?.infectedRatio < 100) {
-    //         console.log(popDto?.infectedRatio)
-    //         simulate()
-    //     }
-    // }, [popDto?.infectedRatio])
-
-    const simulate = () => {
-        setTimeout(async () => {
-            await infect()
-            console.log(popDto.infectedRatio)
-        }, 3000)
-
-    }
-
-
     return (
         <div id='container'>
             {popDto !== null ?
@@ -51,10 +34,9 @@ export const ZombieSimulation = props => {
                     <div id='prog-bar'>
                         <ProgressBar value={popDto.infectedRatio} />
                     </div>
-                    <Button onClick={simulate} className='right' disabled={popDto.infectedRatio >= 100}>Jour suivant</Button>
+                    <Button onClick={infect} className='right' disabled={popDto.infectedRatio >= 100}>Jour suivant</Button>
                 </div>
                 : null}
-
         </div>
     )
 }
