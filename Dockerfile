@@ -7,7 +7,10 @@ RUN npm run build
 FROM nginx
 WORKDIR /app
 COPY --from=build /app/build /usr/share/nginx/html
-COPY --from=build /app/nginx.conf /etc/nginx/conf.d
-EXPOSE 80
+COPY --from=build /app/nginx/nginx.conf /etc/nginx/conf.d
+COPY --from=build /app/nginx/installer.sh /tmp/installer.sh
+RUN /tmp/installer.sh
+RUN rm -R /tmp/installer.sh
+EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
 
