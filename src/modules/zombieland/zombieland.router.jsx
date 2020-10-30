@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { BrowserRouter, Redirect, Route } from 'react-router-dom'
 import { ZombieSetup } from './layouts/setup/setup'
 import { ZombieSimulation } from './layouts/simulation/simulation'

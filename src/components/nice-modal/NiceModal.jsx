@@ -13,7 +13,7 @@ export const NiceModal = memo(props => {
             </Button>
             <CardContent>
                 ${props.show ?
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" /> : null}
+                    <iframe width="560" height="315" title='nice-modal' src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" /> : null}
             </CardContent>
         </Card>
     )

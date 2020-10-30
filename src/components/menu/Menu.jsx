@@ -18,7 +18,7 @@ export const Menu = props => {
 
     useEffect(() => {
         history.push('/home')
-    }, [])
+    }, [history])
 
     const push = (location) => {
         if (!history.location.pathname.includes(location)) {
