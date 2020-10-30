@@ -6,7 +6,7 @@ export class ApiService {
             throw new TypeError('Can\'t be instantiated')
         } else {
             this.Type = Type
-            this.url = `${window.location.protocol}//${window.location.hostname}:${port}/api/${endpoint}`
+            this.url = `${process.env.REACT_APP_BACK_PROTOCOL}//${window.location.hostname}:${port}/api/${endpoint}`
         }
     }
 
