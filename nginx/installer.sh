@@ -1,3 +1,4 @@
+#!/bin/bash
 apt-get update
 # on ajoute un certificat ssl
 openssl req -x509 -nodes -days 365 -subj '/C=FR/ST=Chnord/L=Lille/CN=www.monsupersite.com' -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
@@ -27,7 +28,7 @@ echo "ssl_session_cache shared:SSL:10m;" >>/etc/nginx/snippets/ssl-params.conf
 # définition de l'utilisation des tickets
 echo "ssl_session_tickets off;" >>/etc/nginx/snippets/ssl-params.conf
 # activation de la vérification de la validité du certif par le client
-echo "ssl_stapling on;" >>/etc/nginx/snippets/ssl-params.conf
+echo "ssl_stapling off;" >>/etc/nginx/snippets/ssl-params.conf
 # activation de la vérification de la validité du certif par le serveur
 echo "ssl_stapling_verify on;" >>/etc/nginx/snippets/ssl-params.conf
 # définition d'un serveur DNS valisant l'authenticité du certificat
@@ -38,7 +39,3 @@ echo "resolver_timeout 5s;" >>/etc/nginx/snippets/ssl-params.conf
 echo "add_header X-Content-Type-Options nosniff;" >>/etc/nginx/snippets/ssl-params.conf
 # activation de la protection contre le xss
 echo "add_header X-XSS-Protection '1; mode=block';" >>/etc/nginx/snippets/ssl-params.conf
-echo "conf"
-cat /etc/nginx/snippets/self-signed.conf
-echo "ssl"
-cat /etc/nginx/snippets/ssl-params.conf
