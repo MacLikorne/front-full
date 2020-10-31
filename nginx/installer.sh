@@ -8,6 +8,8 @@ mkdir /etc/nginx/snippets \
 touch /etc/nginx/snippets/self-signed.conf \
 echo "ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;" >>/etc/nginx/snippets/self-signed.conf
 echo "ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;" >>/etc/nginx/snippets/self-signed.conf
+echo "conf"
+cat /etc/nginx/snippets/self-signed.conf \
 # mise en place de la configuration du ssl.
 # création du fichier de configuration
 touch /etc/nginx/snippets/ssl-params.conf \
@@ -39,3 +41,5 @@ echo "resolver_timeout 5s;" >>/etc/nginx/snippets/ssl-params.conf
 echo "add_header X-Content-Type-Options nosniff;" >>/etc/nginx/snippets/ssl-params.conf
 # activation de la protection contre le xss
 echo "add_header X-XSS-Protection '1; mode=block';" >>/etc/nginx/snippets/ssl-params.conf
+echo "ssl"
+cat /etc/nginx/snippets/ssl-params.conf \
