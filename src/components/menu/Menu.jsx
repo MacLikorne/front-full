@@ -27,10 +27,10 @@ export const Menu = props => {
             <AppBar position="static" >
                 <Toolbar >
                     <Tabs value={state.tab} onChange={(e, value) => { dispatch({ type: TabType.EDIT_POS, payload: value }) }}>
-                        <Tab label="Maison" icon={<HomeIcon />} onClick={() => history.replace('home')} />
-                        <Tab label="Zombieland" icon={<SnoozeIcon />} onClick={() => history.replace('zombieland')} />
-                        <Tab label="Bus Magique" icon={<BusIcon />} onClick={() => history.replace('magicbus')} />
-                        <Tab label="Porte des étoiles" icon={<StarIcon />} onClick={() => history.replace('stargate')} />
+                        <Tab label="Maison" icon={<HomeIcon />} onClick={() => history.push('home')} />
+                        <Tab label="Zombieland" icon={<SnoozeIcon />} onClick={() => history.push('zombieland')} />
+                        <Tab label="Bus Magique" icon={<BusIcon />} onClick={() => history.push('magicbus')} />
+                        <Tab label="Porte des étoiles" icon={<StarIcon />} onClick={() => history.push('stargate')} />
                     </Tabs>
                     <Button color="inherit" id='magic-button' onClick={() => { setShowModal(!showModal) }}>
                         <SatisfiedIcon />
