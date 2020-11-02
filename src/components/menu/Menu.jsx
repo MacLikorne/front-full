@@ -23,9 +23,7 @@ export const Menu = props => {
     }, [history])
 
     const push = (location) => {
-        if (!history.location.pathname.includes(location)) {
-            history.replace(location)
-        }
+        history.replace(location)
     }
 
     return (
