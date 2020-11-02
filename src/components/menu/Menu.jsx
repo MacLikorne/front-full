@@ -17,7 +17,9 @@ export const Menu = props => {
     const [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
-        history.push('/home')
+        if (history.location.pathname.lastIndexOf('/') > 0) {
+            history.push(history.location.pathname.slice(0, history.location.pathname.lastIndexOf('/')))
+        }
     }, [history])
 
     const push = (location) => {
