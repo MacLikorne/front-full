@@ -1,7 +1,6 @@
-import { Fragment, useContext, useEffect } from 'react'
+import { Fragment } from 'react'
 import heavy from '../../assets/images/heavy.jpg'
-import { TabType } from '../../components/flux/reducers/tab.reducer'
-import { storeContext } from '../../components/flux/Store'
+
 
 const style = {
     img: {
@@ -13,13 +12,6 @@ const style = {
 }
 
 const Home = props => {
-    const { state, dispatch } = useContext(storeContext)
-
-    useEffect(() => {
-        if (state.tab !== 0) {
-            dispatch({ type: TabType.EDIT_POS, payload: 0 })
-        }
-    }, [])
 
     return (
         <Fragment>
