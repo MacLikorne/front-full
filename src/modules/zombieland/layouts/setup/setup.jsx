@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import Slider from '@material-ui/core/Slider';
 import { storeContext } from '../../../../components/flux/Store';
@@ -38,6 +38,12 @@ export const ZombieSetup = (props) => {
         dispatch({ type: PopType.EDIT_POP, payload: pop })
         history.push('simulation')
     }
+
+    useEffect(() => {
+        return () => {
+            dispatch({ type: PopType.EDIT_POP, payload: pop })
+        }
+    })
 
     return (
         <Fragment>
