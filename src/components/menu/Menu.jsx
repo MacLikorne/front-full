@@ -16,12 +16,6 @@ export const Menu = props => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
 
-    useEffect(() => {
-        if (history.location.pathname.lastIndexOf('/') > 0) {
-            history.push(history.location.pathname.slice(0, history.location.pathname.lastIndexOf('/')))
-        }
-    }, [])
-
     const push = location => {
         if (location !== history.location.pathname) {
             history.replace(location)

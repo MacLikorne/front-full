@@ -33,7 +33,7 @@ export const ZombieSimulation = props => {
             {popDto !== null ?
                 <div id='simulation'>
                     <div className='simu-top'>
-                        <ArrowBackIcon onClick={() => { history.replace('/zombieland/setup') }} />
+                        <ArrowBackIcon onClick={() => { history.replace('/setup') }} />
                         <label >Jour : {day}</label>
                     </div>
                     <Graphic pop={popDto.pop} infectedColor={props.infectedColor} healthyColor={props.healthyColor} id='graphic' />
