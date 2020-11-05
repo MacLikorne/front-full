@@ -14,3 +14,9 @@
 #prog-bar{
     margin-top: 3%;
 }
+
+.simu-top{
+    display: flex;
+    justify-content: space-between;
+}
+

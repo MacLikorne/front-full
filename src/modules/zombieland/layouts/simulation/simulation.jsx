@@ -6,11 +6,14 @@ import ZombieService from '../../services/zombie.service'
 import './simulation.css'
 import { ProgressBar } from '../../components/ProgressBar'
 import { Button } from '@material-ui/core'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from 'react-router-dom'
 
 export const ZombieSimulation = props => {
     const { state } = useContext(storeContext)
     const [day, setDay] = useState(0)
     const [popDto, setPopDto] = useState(null)
+    const history = useHistory()
 
     useEffect(() => {
         PopService.generatePop(state.pop).then(pop => setPopDto(pop))
@@ -29,7 +32,10 @@ export const ZombieSimulation = props => {
         <div id='container'>
             {popDto !== null ?
                 <div id='simulation'>
-                    <label className='right'>Jour : {day}</label>
+                    <div className='simu-top'>
+                        <ArrowBackIcon onClick={() => { history.replace('/zombieland/setup') }} />
+                        <label >Jour : {day}</label>
+                    </div>
                     <Graphic pop={popDto.pop} infectedColor={props.infectedColor} healthyColor={props.healthyColor} id='graphic' />
                     <div id='prog-bar'>
                         <ProgressBar value={popDto.infectedRatio} />

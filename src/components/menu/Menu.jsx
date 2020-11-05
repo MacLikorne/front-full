@@ -18,7 +18,6 @@ export const Menu = props => {
 
     useEffect(() => {
         if (history.location.pathname.lastIndexOf('/') > 0) {
-            console.log('loop ?')
             history.push(history.location.pathname.slice(0, history.location.pathname.lastIndexOf('/')))
         }
     }, [])
