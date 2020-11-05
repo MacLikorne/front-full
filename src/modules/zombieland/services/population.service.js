@@ -4,7 +4,7 @@ import { ApiService } from '../../../components/api/api.service'
 class PopService extends ApiService {
 
     generatePop = size => {
-        return fetch(`${this.url}/${size}`).then(resp => resp.json()).then(json => { console.log(json); return new this.Type(json) })
+        return fetch(`${this.url}/${size}`).then(resp => resp.json()).then(json => new this.Type(json))
     }
 
     patientZero = (popDto) => {
