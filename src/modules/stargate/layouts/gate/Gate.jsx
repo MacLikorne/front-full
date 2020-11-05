@@ -1,6 +1,10 @@
+import { useState } from 'react'
+import { GateSelector } from '../../components/GateSelector'
 
 export const Gate = props => {
+    const [gate, setGate] = useState("")
+
     return (
-        <h4>Bientôt disponible</h4>
+        <GateSelector gate={gate} select={setGate} />
     )
 }
