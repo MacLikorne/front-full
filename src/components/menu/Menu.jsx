@@ -16,6 +16,26 @@ export const Menu = props => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
 
+    useEffect(() => {
+        switch (history.location.pathname) {
+            case '/home':
+                dispatch({ type: TabType.EDIT_POS, payload: 0 })
+                break
+            case '/zombieland':
+                dispatch({ type: TabType.EDIT_POS, payload: 1 })
+                break
+            case '/magicbus':
+                dispatch({ type: TabType.EDIT_POS, payload: 2 })
+                break
+            case '/stargate':
+                dispatch({ type: TabType.EDIT_POS, payload: 3 })
+                break
+            default:
+
+        }
+
+    }, [])
+
     const push = location => {
         if (location !== history.location.pathname) {
             history.replace(location)
