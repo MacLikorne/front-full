@@ -41,7 +41,9 @@ export const ZombieSetup = (props) => {
 
     useEffect(() => {
         return () => {
-            dispatch({ type: PopType.EDIT_POP, payload: pop })
+            if (pop !== state.pop) {
+                dispatch({ type: PopType.EDIT_POP, payload: pop })
+            }
         }
     })
 
