@@ -1,7 +1,7 @@
 ---
 application:
   name: "front-full"
-  project: "Front full"
+  project: "test"
   organization: "QoveryCommunity"
 routers:
 - name: "main-front-full"
