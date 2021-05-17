@@ -1,14 +1,10 @@
 ---
 application:
   name: "front-full"
-  project: "website"
+  project: "web"
   organization: "QoveryCommunity"
-  publicly_accessible: true
 routers:
 - name: "main-front-full"
-  custom_domains:
-  - branch: master
-    domain: toto.qovery.fr
   routes:
   - application_name: "front-full"
     paths:
