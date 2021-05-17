@@ -4,10 +4,10 @@ application:
   project: "web"
   organization: "QoveryCommunity"
 routers:
-custom_domains:
+- name: "main-front-full"
+  custom_domains:
   - branch: master
     domain: zozo.qovery.com
-- name: "main-front-full"
   routes:
   - application_name: "front-full"
     paths:
