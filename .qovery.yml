@@ -7,7 +7,7 @@ routers:
 - name: "main-front-full"
   custom_domains:
   - branch: master
-    domain: zozo.qovery.fr
+    domain: zaza.qovery.fr
   routes:
   - application_name: "front-full"
     paths:
